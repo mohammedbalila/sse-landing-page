@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+
+    <!-- Site Properties -->
+    <title>Homepage - Semantic</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/visibility.js"></script>
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/transition.js"></script>
+    <script>
+      $(document).ready(function() {
+        // fix menu when passed
+        $('.masthead').visibility({
+          once: false,
+          onBottomPassed: function() {
+            $('.fixed.menu').transition('fade in');
+          },
+          onBottomPassedReverse: function() {
+            $('.fixed.menu').transition('fade out');
+          },
+        });
+
+        // create sidebar and attach to menu open
+        $('.ui.sidebar').sidebar('attach events', '.toc.item');
+      });
+    </script>
+  </head>
+
+  <body>
+    <!-- Following Menu -->
+    <div class="ui large top fixed hidden menu">
+      <div class="ui container">
+        <a class="active item" href="#home">Home</a>
+        <a class="item" href="./communities.html">SEE Communities</a>
+        <a class="item" href="#achievements">Achievements</a>
+        <a class="item" href="#about">About us</a>
+        <a class="item" href="#donate">Donate</a>
+        <a class="item" href="#tem">Our team</a>
+      </div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <div class="ui vertical inverted sidebar menu">
+      <a class="active item" href="#home">Home</a>
+      <a class="item" href="./communities.html">SEE Communities</a>
+      <a class="item" href="#achievements">Achievements</a>
+      <a class="item" href="#about">About us</a>
+      <a class="item" href="#donate">Donate</a>
+      <a class="item" href="#tem">Our team</a>
+    </div>
+
+    <!-- Page Contents -->
+    <div class="pusher">
+      <div
+        class="ui inverted vertical landing-image masthead center aligned segment"
+      >
+        <div class="ui container">
+          <div class="ui large secondary inverted pointing menu">
+            <a class="toc item">
+              <i class="sidebar icon"></i>
+            </a>
+            <a class="active item" href="#home">Home</a>
+            <a class="item" href="./communities.html">SEE Communities</a>
+            <a class="item" href="#achievements">Achievements</a>
+            <img
+              class="ui small circular image right item"
+              src="./media/logo.jpg"
+            />
+            <a class="right item" href="#about">About us</a>
+            <a class="right item" href="#donate">Donate</a>
+            <a class="right item" href="#tem">Our team</a>
+          </div>
+        </div>
+
+        <div class="ui text container" id="home">
+          <h1 class="ui inverted header">
+            School Students Exhibition
+          </h1>
+          <h2>Raising Awareness</h2>
+        </div>
+      </div>
+
+      <div class="ui vertical stripe segment" id="about">
+        <div class="ui aligned stackable grid container">
+          <div class="row">
+            <div class="eight wide column">
+              <h3 class="ui header">About</h3>
+              <p>
+                SSE stands for School Students Exhibition It's an initiative by
+                school of math students aimed to perform various activities An
+                annual exhibition, Hackathon competitions with their different
+                fields, scientific conferences, workshops and lectures and
+                finally scientific forums and program clubs and many more Our
+                goal is to close the gab between university education and the
+                job market and to prepare students to face it. We also aim to
+                connect theory with practical applications and keep up with
+                scientific advancements
+              </p>
+            </div>
+            <div class="six wide right floated column">
+              <img
+                src="http://127.0.0.1:8080/media/about.jpg"
+                class="ui large bordered rounded image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui vertical stripe segment" id="activities">
+        <div class="ui aligned stackable grid container">
+          <div class="row">
+            <div class="six wide right floated column">
+              <img
+                src="http://127.0.0.1:8080/media/activities.jpg"
+                class="ui large bordered rounded image"
+              />
+            </div>
+
+            <div class="eight wide column">
+              <h3 class="ui header">Activities</h3>
+              <p>
+                SSE stands for School Students Exhibition It's an initiative by
+                school of math students aimed to perform various activities An
+                annual exhibition, Hackathon competitions with their different
+                fields, scientific conferences, workshops and lectures and
+                finally scientific forums and program clubs and many more Our
+                goal is to close the gab between university education and the
+                job market and to prepare students to face it. We also aim to
+                connect theory with practical applications and keep up with
+                scientific advancements
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui vertical stripe segment" id="achievements">
+        <div class="ui aligned stackable grid container">
+          <div class="row">
+            <div class="eight wide column">
+              <h3 class="ui header">Achievements</h3>
+              <p>
+                SSE stands for School Students Exhibition It's an initiative by
+                school of math students aimed to perform various activities An
+                annual exhibition, Hackathon competitions with their different
+                fields, scientific conferences, workshops and lectures and
+                finally scientific forums and program clubs and many more Our
+                goal is to close the gab between university education and the
+                job market and to prepare students to face it. We also aim to
+                connect theory with practical applications and keep up with
+                scientific advancements
+              </p>
+            </div>
+
+            <div class="six wide right floated column">
+              <img
+                src="http://127.0.0.1:8080/media/achievements.png"
+                class="ui large bordered rounded image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui vertical stripe segment" id="donate">
+        <div class="ui aligned stackable grid container">
+          <div class="row">
+            <div class="eight wide column">
+              <h3 class="ui header">Donate</h3>
+              <p>
+                We need all the possible support!<br />
+                Donation will make our accocaiosn continue so we need your help :).<br />
+                Mbok: <br />
+                Phone: <br />
+                For more information please contacs us.
+              </p>
+            </div>
+
+            <div class="six wide right floated column">
+              <img
+                src="http://127.0.0.1:8080/media/donate.jpg"
+                class="ui large bordered rounded image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui inverted vertical footer segment">
+        <div class="ui container">
+          <div
+            class="ui stackable inverted divided equal height stackable grid"
+          >
+            <div class="three wide column">
+              <h4 class="ui inverted header">About</h4>
+              <div class="ui inverted link list">
+                <a href="#" class="item">Sitemap</a>
+                <a href="#" class="item">Contact Us</a>
+                <a href="#" class="item">Religious Ceremonies</a>
+                <a href="#" class="item">Gazebo Plans</a>
+              </div>
+            </div>
+            <div class="three wide column">
+              <h4 class="ui inverted header">Services</h4>
+              <div class="ui inverted link list">
+                <a href="#" class="item">Banana Pre-Order</a>
+                <a href="#" class="item">DNA FAQ</a>
+                <a href="#" class="item">How To Access</a>
+                <a href="#" class="item">Favorite X-Men</a>
+              </div>
+            </div>
+            <div class="seven wide column">
+              <h4 class="ui inverted header">Footer Header</h4>
+              <p>
+                Extra space for a call to action inside the footer that could
+                help re-engage users.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
